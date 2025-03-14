@@ -145,3 +145,6 @@ function getBook(id) {
 
 const books = getBooks();
 books;
+
+// template literals
+const summary = ``;
