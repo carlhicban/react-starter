@@ -147,4 +147,12 @@ const books = getBooks();
 books;
 
 // template literals
-const summary = ``;
+const summary = `${books.title}`;
+summary;
+
+// short circuiting
+const user = false && "hello";
+const users = true || "hello";
+
+user;
+users;
