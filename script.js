@@ -156,3 +156,12 @@ const users = true || "hello";
 
 user;
 users;
+
+const book = getBook(1);
+
+book;
+
+const { title, id } = book;
+
+title;
+id;
