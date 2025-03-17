@@ -165,3 +165,7 @@ const { title, id } = book;
 
 title;
 id;
+
+const bookName = `${title} with id of ${id}`;
+
+bookName;
