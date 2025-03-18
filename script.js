@@ -169,3 +169,7 @@ id;
 const bookName = `${title} with id of ${id}`;
 
 bookName;
+
+// Ternary
+
+const bookTitle = title == "The Wolf" ? "Yes" : "No";
