@@ -189,3 +189,17 @@ adventureBooks;
 // Reduce
 const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
 pagesAllBooks;
+
+// sort
+
+const x = [3, 7, 1, 9, 6];
+
+const sorted = x.sort((a, b) => b - a);
+
+sorted;
+x;
+
+const sortedSlice = x.slice().sort((a, b) => a - b);
+
+sortedSlice;
+x;
