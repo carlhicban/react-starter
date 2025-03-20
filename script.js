@@ -144,31 +144,31 @@ function getBook(id) {
 }
 
 const books = getBooks();
-books;
+// books;
 
 // template literals
 const summary = `${books.title}`;
-summary;
+// summary;
 
 // short circuiting
 const user = false && "hello";
 const users = true || "hello";
 
-user;
-users;
+// user;
+// users;
 
 const book = getBook(1);
 
-book;
+// book;
 
 const { title, id } = book;
 
-title;
-id;
+// title;
+// id;
 
 const bookName = `${title} with id of ${id}`;
 
-bookName;
+// bookName;
 
 // Ternary
 
@@ -178,17 +178,17 @@ const bookTitle = title == "The Wolf" ? "Yes" : "No";
 const longBooks = books
   .filter((book) => book.pages > 500)
   .filter((book) => book.hasMovieAdaptation);
-longBooks;
+// longBooks;
 
 const adventureBooks = books
   .filter((book) => book.genres.includes("adventure"))
   .map((book) => book.title);
 
-adventureBooks;
+// adventureBooks;
 
 // Reduce
 const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
-pagesAllBooks;
+// pagesAllBooks;
 
 // sort
 
@@ -196,13 +196,13 @@ const x = [3, 7, 1, 9, 6];
 
 const sorted = x.sort((a, b) => b - a);
 
-sorted;
-x;
+// sorted;
+// x;
 
 const sortedSlice = x.slice().sort((a, b) => a - b);
 
-sortedSlice;
-x;
+// sortedSlice;
+// x;
 
 const newBook = {
   id: 6,
@@ -212,14 +212,30 @@ const newBook = {
 
 const booksAfterAdd = [...books, newBook];
 
-booksAfterAdd;
+// booksAfterAdd;
 
 const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
 
-booksAfterDelete;
+// booksAfterDelete;
 
 const booksAfterUpdate = booksAfterDelete.map((book) =>
   book.id === 1 ? { ...book, pages: 1210 } : book
 );
 
-booksAfterUpdate;
+// booksAfterUpdate;
+
+// fetch("https://jsonplaceholder.typicode.com/todos")
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
+
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  // console.log(data);
+
+  return data;
+}
+
+const todos = getTodos();
+// getTodos();
+console.log("jonas");
