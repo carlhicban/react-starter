@@ -203,3 +203,23 @@ const sortedSlice = x.slice().sort((a, b) => a - b);
 
 sortedSlice;
 x;
+
+const newBook = {
+  id: 6,
+  title: "Harry Potter",
+  author: "J. K Rowlin",
+};
+
+const booksAfterAdd = [...books, newBook];
+
+booksAfterAdd;
+
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+
+booksAfterDelete;
+
+const booksAfterUpdate = booksAfterDelete.map((book) =>
+  book.id === 1 ? { ...book, pages: 1210 } : book
+);
+
+booksAfterUpdate;
